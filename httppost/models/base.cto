@@ -1,0 +1,20 @@
+namespace io.clause.outbound.physical
+
+abstract transaction PhysicalIntegrationModel {}
+
+/**
+ * Synchronous outbound messages via HTTP 
+ */
+transaction HTTP extends PhysicalIntegrationModel {
+  o HTTPMethod method
+  o String url
+  o String[] headers optional
+  o String body
+}
+
+enum HTTPMethod {
+  o POST
+  o PATCH
+  o GET
+  o DELETE
+}

@@ -1,0 +1,4 @@
+{
+    "$class": "io.clause.samples.integration.httppost.Request",
+    "data": "foo"
+}
