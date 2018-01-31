@@ -42,15 +42,15 @@ describe('Logic', () => {
         engine = new Engine();    
     });
     
-    describe('#Hello', async function() {
+    describe('#HTTP', async function() {
 
         it('should produce correct result', async function() {
             const request = {};
-            request.$class = 'org.accordproject.helloworld.Request';
-            request.input = 'World'
+            request.$class = 'io.clause.samples.integration.httppost.Request';
+            request.data = 'foo'
             const result = await engine.execute(clause, request);
             result.should.not.be.null;
-            result.response.output.should.equal('Hello Fred Blogs World');
+            result.response.body.should.equal('foo');
         });
     });
 });
