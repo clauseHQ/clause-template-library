@@ -1,7 +1,7 @@
 {
     "name": "httppost",
     "version": "0.0.1",
-    "description": "Trigger URL: \"https://requestb.in/1g3esce1\"",
+    "description": "Trigger URL: \"https:\/\/requestb.in\/1g3esce1\"\r\n",
     "scripts": {
         "test": "mocha"
     },
