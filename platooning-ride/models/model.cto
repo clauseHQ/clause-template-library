@@ -1,0 +1,94 @@
+/**
+ * A business network to represent truck platooning
+ * https://en.wikipedia.org/wiki/Platoon_(automobile)
+ */
+namespace io.clause.poc.platooning
+
+/**
+ * An asset representing each platoon, this is stored on the 
+ * ledger to record the state of each platoon
+ */
+asset Platoon identified by platoonId {
+  o String platoonId
+  --> ServiceProvider serviceProvider
+  --> Truck leader
+  --> Truck[] riders
+}
+
+participant Truck identified by truckId {
+  o String truckId
+  --> Platoon platoon optional
+  --> Subscriber owner
+  o Double odometer
+}
+
+participant ServiceProvider identified by id {
+  o String id
+}
+
+participant Subscriber identified by id {
+  o String id
+}
+
+abstract transaction TruckTransaction {
+  --> Truck truck
+  --> Platoon platoon
+  o Double odometer
+}
+
+/**
+ * Invoked when a truck joins a platoon
+ */
+transaction TruckJoinsPlatoon extends TruckTransaction{
+}
+
+/**
+ * Invoked when a truck leaves a platoon
+ */
+transaction TruckLeavesPlatoon extends TruckTransaction{
+}
+
+/**
+ * Invoked when a change of the lead truck occurs
+ */
+transaction NewPlatoonLeader extends TruckTransaction{
+}
+
+/**
+ * Invoked to close the platoon and calculate the fees due
+ */
+transaction EndPlatoon {
+  --> Platoon platoon
+  o TruckTransaction[] transactions
+}
+
+/**
+ * Returned from a EndPlatoon transaction
+ */
+transaction FeeCalculations {
+  --> ServiceProvider serviceProvider
+  o Double serviceProviderFee
+  o SubscriberFeePair[] subscribers
+}
+
+concept SubscriberFeePair {
+  --> Subscriber subscriber
+  o Double fee
+}
+
+/**
+ * The template model
+ */
+@AccordTemplateModel("platooning-ride")
+concept TemplateModel {
+  o Double monthlyFee
+  o Double leaderFeePerKm
+  o Double highAutomationFeePerKm
+  o Double fullAutomationFeePerKm
+}
+
+/**
+ * JUST FOR INITIALIZING A DEMO
+ */
+transaction SetupDemo {
+}

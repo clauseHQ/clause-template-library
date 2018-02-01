@@ -1,0 +1,16 @@
+1. General Terms
+
+1.1 No promise of punctuality with regards of the predicted schedule, planned time of departure and estimated time of arrival.
+1.2 Liability excluded for all exceptions the service provider is not responsible for such as breakdown, accident, traffic jam
+1.3 The subscriber takes responsibility to keep the schedule. Liability excluded in case a truck is delayed at the point of rendezvous.                           
+1.4 In case a platoon will run out of schedule due to any reasons caused by a platooned truck (e.g. under-performing) the provider is entitled to withdraw from this contract and to advice the technical systems on-board of this truck to initiate a safe “bail out” scenario automatically.
+1.5 Data privacy, Sharing of data
+1.5.1 The subscriber agrees the truck to share data with the service automatically referring to some essential information such as VIN vehicle identification number, maximum gross weight, brake performance indicator, location etc.
+1.5.2 The service provider is allowed to share data with 3rd party (e.g. other provider of platooning brokerage services) without further notice.
+
+2. Tariffs
+
+2.1 A monthly subscription fee of [{monthlyFee}] EUR per truck is invoiced by the platooning service provider to the subscriber.
+2.2 Each kilometer a truck is the leading pace truck of a platoon the subscriber will be invoiced [{leaderFeePerKm}] Cent/km by the platooning service provider
+2.3 Each kilometer a truck is a following truck of a platoon operating in highly automation mode and a driver is on board the truck the subscriber will be invoiced [{highAutomationFeePerKm}] Cent/km by the platooning service provider
+2.4 Each kilometer a truck is a following truck of a platoon operating in fully automation mode and a driver is absent the subscriber will be invoiced [{fullAutomationFeePerKm}] Cent/km by the platooning service provider

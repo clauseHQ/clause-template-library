@@ -1,0 +1,4 @@
+{
+    "$class": "io.clause.poc.platooning.EndPlatoon",
+    "data": "resource:io.clause.poc.platooning.Platoon#1"
+}
