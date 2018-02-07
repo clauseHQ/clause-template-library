@@ -1,0 +1,11 @@
+namespace io.clause.samples.integration.xeroviazapier
+
+import io.clause.outbound.logical.Payment from github://clausehq/clause-model-library/master/logical/logical.cto
+import io.clause.outbound.physical.payments.Xero from github://clausehq/clause-model-library/master/physical/payment/xero.cto
+
+/**
+ * The template model
+ */
+@AccordTemplateModel("xeroviazapier")
+concept TemplateModel {
+}

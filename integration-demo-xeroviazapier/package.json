@@ -1,0 +1,17 @@
+{
+    "name": "integration-xeroviazapier",
+    "version": "0.0.1",
+    "description": "This clause transforms a generic payment into an invoice that will be raise in a private Xero account. The integration happens via Zapier.\r\n",
+    "scripts": {
+        "test": "mocha"
+    },
+    "devDependencies": {
+        "chai": "^4.1.2",
+        "chai-as-promised": "^7.1.1",
+        "chai-things": "^0.2.0",
+        "cicero-core": "^0.2.25",
+        "cicero-engine": "^0.2.25",
+        "mocha": "^4.0.1",
+        "moment": "^2.19.2"
+    }
+}
