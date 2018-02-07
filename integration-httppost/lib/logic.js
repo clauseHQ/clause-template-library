@@ -8,7 +8,7 @@
  * Execute the smart clause
  * @param {Context} context - the Accord context
  * @param {io.clause.samples.integration.httppost.Request} context.request - the incoming request
- * @param {io.clause.outbound.physical.HTTP} context.response - the response
+ * @param {io.clause.outbound.physical.Http} context.response - the response
  * @AccordClauseLogic
  */
 function execute(context) {
