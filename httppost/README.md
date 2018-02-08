@@ -1,2 +1,0 @@
-
-# HTTP Post Sample Clause
