@@ -48,7 +48,7 @@ describe('Logic', () => {
         it('should produce correct result', async function() {
             const result = await engine.execute(clause, request);
             result.should.not.be.null;
-            result.response.lineItems[0].description.should.equal(request.description);
+            result.response.lineItems[0].unitAmount.should.equal(request.amount);
         });
     });
 });

@@ -8,7 +8,7 @@
  * Execute the smart clause
  * @param {Context} context - the Accord context
  * @param {io.clause.outbound.logical.Payment} context.request - the incoming request
- * @param {io.clause.outbound.physical.payments.XeroInvoice} context.response - the response
+ * @param {io.clause.outbound.physical.payments.Xero.XeroInvoice} context.response - the response
  * @AccordClauseLogic
  */
 function execute(context) {
@@ -19,8 +19,9 @@ function execute(context) {
     res.type = 'ACCREC';
     res.currency = req.currency;
     res.accountName = req.destination;
-    res.lineItems[0] = factory.newConcept('io.clause.outbound.physical.payments', 'XeroLineItem');
-    res.lineItems[0].description = req.description;
+    res.lineItems = [];
+    res.lineItems[0] = factory.newConcept('io.clause.outbound.physical.payments.Xero', 'XeroLineItem');
+    res.lineItems[0].description = data.lineItemDescription;
     res.lineItems[0].quantity = 1;
     res.lineItems[0].unitAmount = req.amount;
 }

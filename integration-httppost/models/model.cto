@@ -9,7 +9,7 @@ transaction Request {
 /**
  * The template model
  */
-@AccordTemplateModel("httppost")
+@AccordTemplateModel("integration-httppost")
 concept TemplateModel {
   o String url
 }
