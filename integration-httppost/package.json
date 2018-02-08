@@ -1,7 +1,7 @@
 {
     "name": "integration-httppost",
     "version": "0.0.4",
-    "description": "When triggered, this sample integration clause will send the inbound data to the following URL: \"https://localhost:1880/alert\".",
+    "description": "When triggered, this sample integration clause will send the inbound data to the following URL: \"http://localhost:1880/alert\".",
     "scripts": {
         "test": "mocha"
     },
