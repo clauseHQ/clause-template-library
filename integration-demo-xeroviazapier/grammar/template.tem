@@ -1,0 +1,5 @@
+This clause transforms a generic payment into an invoice that will be raise in a private Xero account. 
+
+The integration happens via a Zapier Web Hook.
+
+The invoice line item will be called, [{lineItemDescription}].

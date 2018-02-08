@@ -1,0 +1,9 @@
+{
+    "$class": "io.clause.outbound.logical.Payment",
+    "contractId":"0",
+    "amount": 100.0,
+    "currency": "GBP",
+    "description": "A test item",
+    "source": "NOT USED",
+    "destination": "Matt's Account"
+}

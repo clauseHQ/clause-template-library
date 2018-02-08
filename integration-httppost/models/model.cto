@@ -1,0 +1,15 @@
+namespace io.clause.samples.integration.httppost
+
+import io.clause.outbound.physical.* from github://clausehq/clause-model-library/master/physical/physical.cto
+
+transaction Request {
+  o String data
+}
+
+/**
+ * The template model
+ */
+@AccordTemplateModel("integration-httppost")
+concept TemplateModel {
+  o String url
+}
