@@ -1,3 +1,6 @@
+/**
+ * (c) Copyright 2018 Clause Inc., all rights reserved.
+ */
 namespace io.clause.samples.integration.xeroviazapier
 
 import io.clause.outbound.logical.Payment from github://clausehq/clause-model-library/master/logical/logical.cto
