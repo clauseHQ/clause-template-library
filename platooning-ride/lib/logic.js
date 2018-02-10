@@ -1,3 +1,6 @@
+/**
+ * (c) Copyright 2018 Clause Inc., all rights reserved.
+ */
 'use strict';
 /**
  * Execute the smart clause

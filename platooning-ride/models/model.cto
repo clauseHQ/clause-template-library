@@ -1,4 +1,7 @@
 /**
+ * (c) Copyright 2018 Clause Inc., all rights reserved.
+ */
+/**
  * A business network to represent truck platooning
  * https://en.wikipedia.org/wiki/Platoon_(automobile)
  */

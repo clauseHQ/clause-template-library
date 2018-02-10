@@ -1,0 +1,42 @@
+{
+  "name": "clause-template-library",
+  "version": "0.0.1",
+  "description": "A library of Cicero smart contract templates",
+  "scripts": {
+    "postinstall": "npm run bootstrap",
+    "bootstrap": "lerna bootstrap",
+    "licensecheck": "license-check",
+    "test": "lerna run test",
+    "pretest": "npm run licensecheck"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/clauseHQ/clause-template-library.git"
+  },
+  "license": "LicenseRef-LICENSE",
+  "bugs": {
+    "url": "https://github.com/clauseHQ/clause-template-library/issues"
+  },
+  "homepage": "https://github.com/clauseHQ/clause-template-library#readme",
+  "license-check-config": {
+    "src": [
+      "**/*.js",
+      "**/*.cto",
+      "!./**/node_modules/**/*",
+      "!./composer-logs/**/*",
+      "!./log/**/*",
+      "!./*"
+    ],
+    "path": "header.txt",
+    "blocking": true,
+    "logInfo": false,
+    "logError": true
+  },
+  "devDependencies": {
+    "chai": "^4.1.2",
+    "eslint": "^3.19.0",
+    "lerna": "^2.5.1",
+    "license-check": "^1.1.5",
+    "mocha": "^5.0.0"
+  }
+}
