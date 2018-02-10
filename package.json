@@ -3,6 +3,7 @@
   "version": "0.0.1",
   "description": "A library of Cicero smart contract templates",
   "scripts": {
+    "postinstall": "npm run bootstrap",
     "bootstrap": "lerna bootstrap",
     "licensecheck": "license-check",
     "test": "lerna run test",
