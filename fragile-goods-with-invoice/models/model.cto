@@ -1,4 +1,7 @@
-namespace io.clause.demo.fragileGoods
+/**
+ * (c) Copyright 2018 Clause Inc., all rights reserved.
+ */
+ namespace io.clause.demo.fragileGoods
 
 import org.accordproject.time.* from github://accordproject/models/master/time.cto
 import io.clause.outbound.physical.payments.xero.* from github://clausehq/clause-model-library/master/physical/payments/xero.cto
