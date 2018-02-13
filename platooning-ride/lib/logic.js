@@ -24,6 +24,7 @@ function ExitPlatoon(context) {
     let vehicle = req.vehicle;
 
     // Find only the vehicle transactions since the vehicle joined the platoon
+    // TODO (MR) Note. Currently this calculates the total distance if a truck joins the same platoon multiple times.
     let isInPlatoon = false;
     let totalDistance = platoonLeader.vehicleTransactions.filter((tx) => {
         // Only count the transactions that occured while the truck was in the platoon
