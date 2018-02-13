@@ -22,24 +22,109 @@ describe('Logic', () => {
 
     let template;
     let clause;
-    let engine;    
+    let engine;
 
     beforeEach( async function() {
         template = await Template.fromDirectory(rootDir);
         clause = new Clause(template);
-        console.log(clause.data);
-        engine = new Engine();    
+        clause.parse(clauseText);
+        engine = new Engine();
     });
-    
-    describe('#EndPlatoon', async function() {
 
-        it.skip('should produce correct result', async function() {
-            const request = {};
-            request.$class = 'io.clause.poc.platooning.EndPlatoon';
-            request.platoon = 'resource:io.clause.poc.platooning.Platoon#1'
-            request.transactions = [];
+    describe('#EndPlatoon', async function() {
+        let vehicle1 = {
+            $class: 'io.clause.platoon.Vehicle',
+            id:'1',
+            vehicleSpecification:{
+                $class: 'io.clause.platoon.VehicleSpecification',
+                make:'X',
+                model:'Y',
+                year: 2018,
+                brakingDistance: 0
+            },
+            location: {
+                $class: 'io.clause.platoon.Location',
+                lat:0,
+                long:0,
+            },
+            platoonContractUrl:'',
+            vehicleTransactions: [],
+        };
+
+        let vehicle2={
+            $class: 'io.clause.platoon.Vehicle',
+            id:'2',
+            vehicleSpecification:{
+                $class: 'io.clause.platoon.VehicleSpecification',
+                make:'X',
+                model:'Y',
+                year: 2018,
+                brakingDistance: 0
+            },
+            location: {
+                $class: 'io.clause.platoon.Location',
+                lat:0,
+                long:0,
+            },
+            platoonContractUrl:'',
+            vehicleTransactions: [
+                {
+                    $class: 'io.clause.platoon.JoinPlatoon',
+                    transactionId:'0',
+                    vehicle: 'resource:io.clause.platoon.Vehicle#1',
+                },
+                {
+                    $class: 'io.clause.platoon.VehicleMovement',
+                    transactionId:'1',
+                    vehicle: 'resource:io.clause.platoon.Vehicle#1',
+                    location: {
+                        $class: 'io.clause.platoon.Location',
+                        lat:51.0614490,
+                        long:-1.3380280,
+                    }
+                },
+                {
+                    $class: 'io.clause.platoon.VehicleMovement',
+                    transactionId:'2',
+                    vehicle: 'resource:io.clause.platoon.Vehicle#2',
+                    location: {
+                        $class: 'io.clause.platoon.Location',
+                        lat:2,
+                        long:2,
+                    }
+                },
+                {
+                    $class: 'io.clause.platoon.VehicleMovement',
+                    transactionId:'3',
+                    vehicle: 'resource:io.clause.platoon.Vehicle#1',
+                    location: {
+                        $class: 'io.clause.platoon.Location',
+                        lat:51.0614380,
+                        long:-1.3380050,
+                    }
+                },
+                {
+                    $class: 'io.clause.platoon.VehicleMovement',
+                    transactionId:'4',
+                    vehicle: 'resource:io.clause.platoon.Vehicle#1',
+                    location: {
+                        $class: 'io.clause.platoon.Location',
+                        lat:51.0624380,
+                        long:-1.3370050,
+                    }
+                }
+            ],
+        };
+
+        it('should produce correct result', async function() {
+            const request = {
+                $class: 'io.clause.platoon.ExitPlatoon',
+                vehicle: vehicle1,
+                platoonLeader: vehicle2,
+            };
             const result = await engine.execute(clause, request);
-            result.should.not.be.null;
+            result.response.leaderFee.should.be.equal(20.002748737228615);
+            result.response.subscriberFee.should.be.equal(13.335165824819079);
         });
     });
 });

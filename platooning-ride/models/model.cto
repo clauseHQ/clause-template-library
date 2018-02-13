@@ -5,78 +5,122 @@
  * A business network to represent truck platooning
  * https://en.wikipedia.org/wiki/Platoon_(automobile)
  */
-namespace io.clause.poc.platooning
+namespace io.clause.platoon
+
+concept Address {
+  o String street
+  o String city
+  o String zip
+  o String country
+}
+
+concept Location {
+  o Double lat
+  o Double long
+}
+
+concept Destination extends Location {
+  o Address address optional
+}
+
+concept VehicleSpecification {
+  o String make
+  o String model
+  o Integer year
+  o Double brakingDistance // placeholders
+}
 
 /**
- * An asset representing each platoon, this is stored on the 
- * ledger to record the state of each platoon
+ * A vehicle being tracked. A vehicle can be in one of 3 states:
+ * 1. The vehicle is not a platoon leader, and is not a member of a platoon
+ * (platoon is null and platoonLeader is null)
+ * 2. The vehicle is a platoon leader (platoon is not null, and platoonLeader is null)
+ * 3. The vehicle is a member of a platoon (platoon is not null, platoonLeader is null)
+ *
+ * Vehicles have a current location as well as an optional destination.
  */
-asset Platoon identified by platoonId {
-  o String platoonId
-  --> ServiceProvider serviceProvider
-  --> Truck leader
-  --> Truck[] riders
-}
-
-participant Truck identified by truckId {
-  o String truckId
-  --> Platoon platoon optional
-  --> Subscriber owner
-  o Double odometer
-}
-
-participant ServiceProvider identified by id {
+asset Vehicle identified by id {
   o String id
+
+  /**
+   * Technical specification for the vehicle
+   */
+  o VehicleSpecification vehicleSpecification
+
+  /**
+   * Current position of the vehicle
+   */
+  o Location location
+
+  /**
+   * Current destination for the contract
+   */
+  o Destination destination optional
+
+  /**
+   * If someone wants to form into a platoon with this vehicle, this is the vehicle's contract
+   */
+  o String platoonContractUrl
+
+  /**
+   * Vehicles that have formed into a platoon behind this vehicle
+   * send their Join and Exit transactions to the leader for billing purposes.
+   * Vehicles can be billed when they leave, when the leader arrives at their
+   * destination, or on a schedule.
+   */
+    o VehicleTransaction[] vehicleTransactions optional
+
+  /**
+   * The ordered list of vehicles that are formed up behind this vehicle if this vehicle
+   * is currently a platoon leader.
+   */
+    --> Vehicle[] platoon optional
+
+  /**
+   * The platoon leader for this vehicle, if this vehicle is currently in a platoon.
+   */
+    --> Vehicle platoonLeader optional
 }
 
-participant Subscriber identified by id {
-  o String id
-}
-
-abstract transaction TruckTransaction {
-  --> Truck truck
-  --> Platoon platoon
-  o Double odometer
+abstract transaction VehicleTransaction {
+  --> Vehicle vehicle
 }
 
 /**
- * Invoked when a truck joins a platoon
+ * Update the position of a vehicle
  */
-transaction TruckJoinsPlatoon extends TruckTransaction{
+transaction VehicleMovement extends VehicleTransaction{
+  o Location location
 }
 
 /**
- * Invoked when a truck leaves a platoon
+ * Update the destination for a vehicle
  */
-transaction TruckLeavesPlatoon extends TruckTransaction{
+transaction VehicleUpdateDestination extends VehicleTransaction{
+  o Destination destination
 }
 
 /**
- * Invoked when a change of the lead truck occurs
+ * A vehicle joins a platoon. This can fail if the contract for the leader rejects the vehicle
+ * based on the state of the platoon, or the specifications of the vehicle trying to join
  */
-transaction NewPlatoonLeader extends TruckTransaction{
+transaction JoinPlatoon extends VehicleTransaction{
+  --> Vehicle platoonLeader
 }
 
 /**
- * Invoked to close the platoon and calculate the fees due
+ * A vehicle exits a platoon
  */
-transaction EndPlatoon {
-  --> Platoon platoon
-  o TruckTransaction[] transactions
+transaction ExitPlatoon extends VehicleTransaction {
+  --> Vehicle platoonLeader
 }
 
 /**
  * Returned from a EndPlatoon transaction
  */
 transaction FeeCalculations {
-  --> ServiceProvider serviceProvider
-  o Double serviceProviderFee
-  o SubscriberFeePair[] subscribers
-}
-
-concept SubscriberFeePair {
-  --> Subscriber subscriber
-  o Double fee
+  o Double leaderFee
+  o Double subscriberFee
 }
 
 /**
@@ -88,10 +132,4 @@ concept TemplateModel {
   o Double leaderFeePerKm
   o Double highAutomationFeePerKm
   o Double fullAutomationFeePerKm
-}
-
-/**
- * JUST FOR INITIALIZING A DEMO
- */
-transaction SetupDemo {
 }
