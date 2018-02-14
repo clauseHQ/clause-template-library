@@ -1,4 +1,7 @@
-namespace io.clause.samples.saasintroduction
+/**
+ * (c) Copyright 2018 Clause Inc., all rights reserved.
+ */
+ namespace io.clause.samples.saasintroduction
 
 transaction Request {
 }
