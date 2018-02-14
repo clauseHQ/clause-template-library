@@ -1,0 +1,5 @@
+This Software as a Service Agreement (this 'Agreement'), effective as of "14 February, 2018" (the 'Effective Date'), is by and between "Clause Inc." ('Provider') and "EuroLogistics GmbH" ('Customer'). 
+Provider and Customer may be referred to herein collectively as the 'Parties' or individually as a 'Party.' 
+WHEREAS, Provider provides access to the Services to its customers; and
+WHEREAS, Customer desires to access the Services, and Provider desires to provide Customer access to the Services, subject to the terms and conditions of this Agreement.
+NOW, THEREFORE, in consideration of the mutual covenants, terms, and conditions set forth herein, and for other good and valuable consideration, the receipt and sufficiency of which are hereby acknowledged, the Parties agree as follows:
