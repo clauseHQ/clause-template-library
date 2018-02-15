@@ -123,8 +123,7 @@ describe('Logic', () => {
                 platoonLeader: vehicle2,
             };
             const result = await engine.execute(clause, request);
-            result.response.leaderFee.should.be.equal(33.33791456204769);
-            result.response.subscriberFee.should.be.equal(13.335165824819079);
+            JSON.parse(result.response.body).quantity.should.be.equal('133.35');
         });
     });
 });

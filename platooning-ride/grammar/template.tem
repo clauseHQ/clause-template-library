@@ -4,5 +4,7 @@ Capitalized terms used but not defined in this Exhibit A have the meaning given 
 A. FEES:
 
 A.1 A monthly subscription fee of [{monthlyFee}] EUR per truck is invoiced by the platooning service provider to the subscriber.
-A.2 For each kilometer that A TRUCK is the LEADING TRUCK of a platoon THE CUSTOMER will be invoiced [{leaderFeePerKm}] EUR by the platooning service provider.
-A.3 For each kilometer that A TRUCK is a FOLLOWING TRUCK of a platoon a driver is on-board THE TRUCK, THE CUSTOMER will be invoiced [{highAutomationFeePerKm}] EUR by the platooning service provider.
+
+A.2 For each kilometer that a truck is the leading truck of a platoon the customer will be credited [{leaderFeePerKm}] EUR by the provider.
+
+A.3 For each kilometer that a truck is a truck platoon member, the customer will be invoiced [{highAutomationFeePerKm}] EUR by the provider.

@@ -11,7 +11,7 @@
  * Execute the smart clause
  * @param {Context} context - the Accord context
  * @param {io.clause.platoon.ExitPlatoon} context.request - the incoming request
- * @param {io.clause.platoon.FeeCalculations} context.response - the response
+ * @param {io.clause.outbound.physical.Http} context.response - the response
  * @AccordClauseLogic
  */
 function ExitPlatoon(context) {
@@ -53,8 +53,32 @@ function ExitPlatoon(context) {
     // Sum the route steps
     .reduce((prev, current) => prev + current, 0);
 
-    res.leaderFee = totalDistance * data.highAutomationFeePerKm;
-    res.subscriberFee = totalDistance * data.leaderFeePerKm;
+    // Build the outbound payload
+    res.url = 'https://hooks.zapier.com/hooks/catch/2739350/zk5smc/';
+    res.method = 'POST';
+    res.body = JSON.stringify({
+        description: 'Rider. ' + formatDate(new Date()) + '. Vehicle ' + vehicle.getIdentifier() + '. ' + totalDistance.toFixed(2) + ' km',
+        quantity: totalDistance.toFixed(2),
+        rate: data.subscriberFee,
+    });
+
+}
+
+/**
+ *
+ * @param {Date} date - the date
+ * @returns {string} - formatted date
+ */
+function formatDate(date) {
+    var d = new Date(date),
+        month = '' + (d.getMonth() + 1),
+        day = '' + d.getDate(),
+        year = d.getFullYear();
+
+    if (month.length < 2) {month = '0' + month;}
+    if (day.length < 2) {day = '0' + day;}
+
+    return [year, month, day].join('-');
 }
 
 /**

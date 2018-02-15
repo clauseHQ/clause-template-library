@@ -1,7 +1,7 @@
 {
   "name": "saas-introduction",
   "version": "0.0.0",
-  "description": "Name of the person to greet: \"Dan\".\nThank you!",
+  "description": "A Software-as-a-service introduction block.",
   "engines": {
     "cicero": "^0.2.28"
   },

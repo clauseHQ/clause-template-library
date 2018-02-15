@@ -7,6 +7,8 @@
  */
 namespace io.clause.platoon
 
+import io.clause.outbound.physical.* from github://clausehq/clause-model-library/master/physical/physical.cto
+
 concept Address {
   o String street
   o String city
