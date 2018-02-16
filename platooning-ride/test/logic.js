@@ -67,53 +67,7 @@ describe('Logic', () => {
                 long:0,
             },
             platoonContractUrl:'',
-            vehicleTransactions: [
-                {
-                    $class: 'io.clause.platoon.JoinPlatoon',
-                    transactionId:'0',
-                    vehicle: 'resource:io.clause.platoon.Vehicle#1',
-                },
-                {
-                    $class: 'io.clause.platoon.VehicleMovement',
-                    transactionId:'1',
-                    vehicle: 'resource:io.clause.platoon.Vehicle#1',
-                    location: {
-                        $class: 'io.clause.platoon.Location',
-                        lat:51.0614490,
-                        long:-1.3380280,
-                    }
-                },
-                {
-                    $class: 'io.clause.platoon.VehicleMovement',
-                    transactionId:'2',
-                    vehicle: 'resource:io.clause.platoon.Vehicle#2',
-                    location: {
-                        $class: 'io.clause.platoon.Location',
-                        lat:2,
-                        long:2,
-                    }
-                },
-                {
-                    $class: 'io.clause.platoon.VehicleMovement',
-                    transactionId:'3',
-                    vehicle: 'resource:io.clause.platoon.Vehicle#1',
-                    location: {
-                        $class: 'io.clause.platoon.Location',
-                        lat:51.0614380,
-                        long:-1.3380050,
-                    }
-                },
-                {
-                    $class: 'io.clause.platoon.VehicleMovement',
-                    transactionId:'4',
-                    vehicle: 'resource:io.clause.platoon.Vehicle#1',
-                    location: {
-                        $class: 'io.clause.platoon.Location',
-                        lat:51.0624380,
-                        long:-1.3370050,
-                    }
-                }
-            ],
+            vehicleTransactions: [],
         };
 
         it('should produce correct result', async function() {
@@ -121,9 +75,10 @@ describe('Logic', () => {
                 $class: 'io.clause.platoon.ExitPlatoon',
                 vehicle: vehicle1,
                 platoonLeader: vehicle2,
+                distance: 100,
             };
             const result = await engine.execute(clause, request);
-            JSON.parse(result.response.body).quantity.should.be.equal('133.35');
+            result.response.lineItem.quantity.should.be.equal(100);
         });
     });
 });

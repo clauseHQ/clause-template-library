@@ -8,6 +8,7 @@
 namespace io.clause.platoon
 
 import io.clause.outbound.physical.* from github://clausehq/clause-model-library/master/physical/physical.cto
+import io.clause.outbound.physical.payments.xero.* from github://clausehq/clause-model-library/master/physical/payments/xero.cto
 
 concept Address {
   o String street
@@ -115,6 +116,7 @@ transaction JoinPlatoon extends VehicleTransaction{
  */
 transaction ExitPlatoon extends VehicleTransaction {
   --> Vehicle platoonLeader
+  o Double distance 
 }
 
 /**
