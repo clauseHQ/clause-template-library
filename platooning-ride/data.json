@@ -35,5 +35,6 @@
         },
         "platoonContractUrl":"",
         "vehicleTransactions": []
-    }
+    },
+    "distance":123
 }
