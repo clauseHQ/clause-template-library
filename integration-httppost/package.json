@@ -1,7 +1,7 @@
 {
     "name": "integration-httppost",
     "version": "0.0.4",
-    "description": "When triggered, this sample integration clause will send the inbound data to the following URL: \"http://localhost:1880/alert\".",
+    "description": "This sample clause demonstrates how to send data to an external URL.",
     "engines": {
         "cicero": "^0.2.28"
     },
