@@ -1,0 +1,17 @@
+/**
+ * (c) Copyright 2018 Clause Inc., all rights reserved.
+ */
+namespace io.clause.samples.integration.httpget
+
+import io.clause.outbound.physical.* from github://clausehq/clause-model-library/master/physical/physical.cto
+
+transaction Request {
+}
+
+/**
+ * The template model
+ */
+@AccordTemplateModel("integration-httpget")
+concept TemplateModel {
+  o String url
+}

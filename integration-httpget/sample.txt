@@ -1,0 +1,1 @@
+When triggered, this sample integration clause will call the following URL: "http://localhost:1880/alert".
