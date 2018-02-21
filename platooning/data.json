@@ -1,0 +1,40 @@
+{
+    "$class": "io.clause.platoon.ExitPlatoon",
+    "vehicle": {
+        "$class": "io.clause.platoon.Vehicle",
+        "id":"1",
+        "vehicleSpecification":{
+            "$class": "io.clause.platoon.VehicleSpecification",
+            "make":"X",
+            "model":"Y",
+            "year": 2018,
+            "brakingDistance": 0
+        },
+        "location": {
+            "$class": "io.clause.platoon.Location",
+            "lat":0,
+            "long":0
+        },
+        "platoonContractUrl":"",
+        "vehicleTransactions": []
+    },
+    "platoonLeader":{
+        "$class": "io.clause.platoon.Vehicle",
+        "id":"2",
+        "vehicleSpecification":{
+            "$class": "io.clause.platoon.VehicleSpecification",
+            "make":"X",
+            "model":"Y",
+            "year": 2018,
+            "brakingDistance": 0
+        },
+        "location": {
+            "$class": "io.clause.platoon.Location",
+            "lat":0,
+            "long":0
+        },
+        "platoonContractUrl":"",
+        "vehicleTransactions": []
+    },
+    "distance":123
+}
