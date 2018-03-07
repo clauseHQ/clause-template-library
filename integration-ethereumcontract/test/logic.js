@@ -35,7 +35,7 @@ describe('Logic', () => {
 
         it('should produce correct result', async function() {
             const request = {};
-            request.$class = 'io.clause.samples.integration.ethereumContract.Request';
+            request.$class = 'io.clause.samples.integration.ethereumcontract.Request';
             const result = await engine.execute(clause, request);
             result.should.not.be.null;
         });
