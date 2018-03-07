@@ -67,14 +67,14 @@ For the request above, you should see the following response:
 ```json
 {
     "$class":"io.clause.outbound.physical.dlt.ethereum.NonInteractiveEthereumTransaction",
-    "fromAccount":"0x9b32097dc7c2a89b47f26ff2628119b9bdd4f99f",
+    "fromAccount":"0xd6a33a691c19169a9e8121d12cfc602fa29f3663",
     "privateKey":"0x6afe5c024ae7c41983edc026f2122e0b24d934b1982b9d9d552fbb224286bfdc",
     "contractAddress":"0xBe85EbE9fee3646177fc94Ffb97DdBcd8B465552",
-    "contractInterface":"[{'constant':true,'inputs':[{'name':'','type':'address'}],'name':'balances','outputs':[{'name':'','type':'uint256'}],'payable':false,'stateMutability':'view','type':'function'},{'constant':false,'inputs':[{'name':'_to','type':'address'},{'name':'_amount','type':'uint256'}],'name':'transfer','outputs':[],'payable':false,'stateMutability':'nonpayable','type':'function'},{'inputs':[],'payable':false,'stateMutability':'nonpayable','type':'constructor'}]",
+    "contractInterface":"[{\"constant\":true,\"inputs\":[{\"name\":\"\",\"type\":\"address\"}],\"name\":\"balances\",\"outputs\":[{\"name\":\"\",\"type\":\"uint256\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"},{\"constant\":false,\"inputs\":[{\"name\":\"_to\",\"type\":\"address\"},{\"name\":\"_amount\",\"type\":\"uint256\"}],\"name\":\"transfer\",\"outputs\":[],\"payable\":false,\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[],\"payable\":false,\"stateMutability\":\"nonpayable\",\"type\":\"constructor\"}]",
     "data":"0xa9059cbb000000000000000000000000d6a33a691c19169a9e8121d12cfc602fa29f36630000000000000000000000000000000000000000000000000000000000000064",
     "gasLimit":200000,
-    "transactionId":"fee90aaa-22ae-4fc9-a99d-6f0743ffbacf",
-    "timestamp":"2018-03-07T13:25:31.512Z"
+    "transactionId":"580f4e96-fcdf-491e-a856-a7f26440afa6",
+    "timestamp":"2018-03-07T15:52:56.253Z"
 }
 ```
 The values in the response are from the [clause text](sample.txt). When executing this clause on the [Clause platform](https://clause.io), this response is automatically understood and the platform will make the Ethereum transfer.
