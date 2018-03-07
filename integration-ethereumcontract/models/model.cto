@@ -1,0 +1,25 @@
+/**
+ * (c) Copyright 2018 Clause Inc., all rights reserved.
+ */
+namespace io.clause.samples.integration.ethereumcontract
+
+import io.clause.outbound.physical.dlt.ethereum.* from github://clausehq/clause-model-library/master/physical/dlt/ethereum.cto
+
+transaction Request {
+  // TODO (DCS) we don't allow changing the network as that would be a massive security issue
+  // o String rpcUrl optional // defaults to the Rinkeby test network
+  o Long gasLimit default = 200000
+  o Long gasPrice optional // defaults to recent gasPrice + 20%
+}
+
+/**
+ * The template model
+ */
+@AccordTemplateModel("integration-ethereumcontract")
+concept TemplateModel {
+  o String fromAccount
+  o String privateKey
+  o String contractAddress
+  o String contractInterface
+  o String data
+}

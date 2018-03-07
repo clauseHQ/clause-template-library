@@ -1,0 +1,7 @@
+Invoke Ethereum contract "0xBe85EbE9fee3646177fc94Ffb97DdBcd8B465552" with 
+interface
+"[{'constant':true,'inputs':[{'name':'','type':'address'}],'name':'balances','outputs':[{'name':'','type':'uint256'}],'payable':false,'stateMutability':'view','type':'function'},{'constant':false,'inputs':[{'name':'_to','type':'address'},{'name':'_amount','type':'uint256'}],'name':'transfer','outputs':[],'payable':false,'stateMutability':'nonpayable','type':'function'},{'inputs':[],'payable':false,'stateMutability':'nonpayable','type':'constructor'}]"
+Send the data
+"0xa9059cbb000000000000000000000000d6a33a691c19169a9e8121d12cfc602fa29f36630000000000000000000000000000000000000000000000000000000000000064"
+
+Sign the transaction as "0x9b32097dc7c2a89b47f26ff2628119b9bdd4f99f" using the private key "0x6afe5c024ae7c41983edc026f2122e0b24d934b1982b9d9d552fbb224286bfdc".

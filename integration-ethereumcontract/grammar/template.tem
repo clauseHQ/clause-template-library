@@ -1,0 +1,7 @@
+Invoke Ethereum contract [{contractAddress}] with 
+interface
+[{contractInterface}]
+Send the data
+[{data}]
+
+Sign the transaction as [{fromAccount}] using the private key [{privateKey}].
