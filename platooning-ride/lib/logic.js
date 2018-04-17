@@ -24,7 +24,7 @@ function ExitPlatoon(context) {
     let totalDistance = req.distance;
 
     // Build the outbound payload
-    res.invoiceId = '7a1f50d3-86ae-42d4-9238-2f9bcd9f1411';
+    res.invoiceId = '81ad55f1-787a-42d1-8ca9-e25ef761d830';
     res.lineItem = factory.newConcept('io.clause.outbound.physical.payments.xero', 'XeroLineItem');
     res.lineItem.description = formatDate(new Date()) + '. Vehicle ' + vehicle.getIdentifier() + '. ' + Math.round(totalDistance) + ' km';
     res.lineItem.quantity = totalDistance;
