@@ -84,23 +84,23 @@ The value of the data attribute is equivalent to `JSON.stringify(data)`.
 
 Then when configuring your webhook, choose the `Catch Hook` option.
 
-![webhook setup on zapier](docs/WebHook-catchhook.png)
+![webhook setup on zapier](https://s3.amazonaws.com/clause-staging-static/clause-template-library/integration-httppost/WebHook-catchhook.png)
 
 Zapier will generate a unique URL for your integration. You should use this in your contract code, so that Clause knows where to send your data. 
 
 > i.e. replace `YOUR_ZAPIER_WEB_HOOK_URL` in the code above with the value in this field.
 
-![webhook setup on zapier](docs/WebHook-view.png)
+![webhook setup on zapier](https://s3.amazonaws.com/clause-staging-static/clause-template-library/integration-httppost/WebHook-view.png)
 
 Sending a test message during setup of Zapier is crucial as this allows Zapier to know the format of messages it will recieve. It is recommended that you use the Clause `/execute` REST API to emit a test message.
 
-![webhook setup on zapier](docs/WebHook-test.png)
+![webhook setup on zapier](https://s3.amazonaws.com/clause-staging-static/clause-template-library/integration-httppost/WebHook-test.png)
 
 Once successful you can use the Action editor to configure your connection to Google Sheets and to map the fields from your test message. You should choose `Create Spreadsheet Row` from the Google Sheets action wizard.
 
 > Note. Your spreadsheet should already exist on Google Sheets before you try this step.
 
-![webhook setup on zapier](docs/GoogleSheets-setup.png)
+![webhook setup on zapier](https://s3.amazonaws.com/clause-staging-static/clause-template-library/integration-httppost/GoogleSheets-setup.png)
 
 All done!
 
