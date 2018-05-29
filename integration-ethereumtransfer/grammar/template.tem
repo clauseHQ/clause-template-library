@@ -1,1 +1,0 @@
-Transfer [{weiValue}] wei from Ethereum account [{fromAccount}] to account [{toAccount}] signing the transaction using the private key [{privateKey}].
