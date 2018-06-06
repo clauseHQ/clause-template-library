@@ -4,9 +4,9 @@
 
 'use strict';
 
-const Template = require('cicero-core').Template;
-const Clause = require('cicero-core').Clause;
-const Engine = require('cicero-engine').Engine;
+const Template = require('@accordproject/cicero-core').Template;
+const Clause = require('@accordproject/cicero-core').Clause;
+const Engine = require('@accordproject/cicero-engine').Engine;
 
 const fs = require('fs');
 const path = require('path');
@@ -24,6 +24,11 @@ describe('Logic', () => {
     let clause;
     let engine;
 
+    let state = {
+        '$class': 'org.accordproject.common.ContractState',
+        'stateId': 'org.accordproject.common.ContractState#1'
+    };
+
     beforeEach( async function() {
         template = await Template.fromDirectory(rootDir);
         clause = new Clause(template);
@@ -37,7 +42,7 @@ describe('Logic', () => {
             const request = {
                 $class: 'io.clause.samples.saasintroduction.Request'
             };
-            const result = await engine.execute(clause, request);
+            const result = await engine.execute(clause, request, state);
             result.should.not.be.null;
         });
     });
