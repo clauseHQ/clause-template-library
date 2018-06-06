@@ -122,9 +122,9 @@ transaction ExitPlatoon extends VehicleTransaction {
 /**
  * Returned from a EndPlatoon transaction
  */
-transaction FeeCalculations {
-  o Double leaderFee
-  o Double subscriberFee
+transaction FeeCalculations extends VehicleTransaction {
+  o Double feePerKm
+  o Double totalDistance
 }
 
 /**

@@ -83,7 +83,7 @@ describe('Logic', () => {
                 distance: 100,
             };
             const result = await engine.execute(clause, request, state);
-            result.response.lineItem.quantity.should.be.equal(100);
+            result.response.totalDistance.should.be.equal(100);
         });
     });
 });

@@ -11,7 +11,7 @@
  * Execute the smart clause
  * @param {Context} context - the Accord context
  * @param {io.clause.platoon.ExitPlatoon} context.request - the incoming request
- * @param {io.clause.outbound.physical.payments.xero.XeroAddLineItemToInvoice} context.response - the response
+ * @param {io.clause.platoon.FeeCalculations} context.response - the response
  * @AccordClauseLogic
  */
 function ExitPlatoon(context) {
@@ -24,31 +24,11 @@ function ExitPlatoon(context) {
     let totalDistance = req.distance;
 
     // Build the outbound payload
-    res.invoiceId = '81ad55f1-787a-42d1-8ca9-e25ef761d830';
-    res.lineItem = factory.newConcept('io.clause.outbound.physical.payments.xero', 'XeroLineItem');
-    res.lineItem.description = formatDate(new Date()) + '. Vehicle ' + vehicle.getIdentifier() + '. ' + Math.round(totalDistance) + ' km';
-    res.lineItem.quantity = totalDistance;
-    res.lineItem.unitAmount = data.highAutomationFeePerKm;
-    res.lineItem.itemCode= 'RIDER';
+    res.vehicle = vehicle;
+    res.totalDistance = totalDistance;
+    res.feePerKm = data.highAutomationFeePerKm;
     // logger.info(context);
 
-}
-
-/**
- *
- * @param {Date} date - the date
- * @returns {string} - formatted date
- */
-function formatDate(date) {
-    var d = new Date(date),
-        month = '' + (d.getMonth() + 1),
-        day = '' + d.getDate(),
-        year = d.getFullYear();
-
-    if (month.length < 2) {month = '0' + month;}
-    if (day.length < 2) {day = '0' + day;}
-
-    return [year, month, day].join('-');
 }
 
 /* eslint-enable no-unused-vars */
