@@ -1,6 +1,6 @@
 {
     "name": "platooning-ride",
-    "version": "0.0.1",
+    "version": "0.0.2",
     "description": "A sample exhibit incluing fees for a truck platooning contract.",
     "cicero": {
         "version": "^0.3",
