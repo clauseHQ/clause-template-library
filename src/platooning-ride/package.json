@@ -1,10 +1,11 @@
 {
-    "name": "platooning",
-    "version": "0.0.2",
+    "name": "platooning-ride",
+    "version": "0.1.0",
     "description": "A sample exhibit incluing fees for a truck platooning contract.",
     "cicero": {
-        "version": "^0.3",
-        "template": "clause"
+        "version": "^0.4",
+        "template": "clause",
+        "language": "javascript"
     },
     "scripts": {
         "test": "mocha"
@@ -13,8 +14,8 @@
         "chai": "^4.1.2",
         "chai-as-promised": "^7.1.1",
         "chai-things": "^0.2.0",
-        "@accordproject/cicero-core": "^0.3",
-        "@accordproject/cicero-engine": "^0.3",
+        "@accordproject/cicero-core": "^0.4",
+        "@accordproject/cicero-engine": "^0.4",
         "mocha": "^4.0.1",
         "moment": "^2.19.2"
     }

@@ -1,0 +1,14 @@
+@startuml
+class io.clause.samples.saasintroduction.Request << (T,yellow) >> {
+}
+io.clause.samples.saasintroduction.Request --|> org.hyperledger.composer.system.Transaction
+class io.clause.samples.saasintroduction.Response << (T,yellow) >> {
+}
+io.clause.samples.saasintroduction.Response --|> org.hyperledger.composer.system.Transaction
+class io.clause.samples.saasintroduction.TemplateModel << (A,green) >> {
+   + String effectiveDate
+   + String providerName
+   + String customerName
+}
+io.clause.samples.saasintroduction.TemplateModel --|> org.accordproject.cicero.contract.AccordClause
+@enduml

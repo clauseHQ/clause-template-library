@@ -71,8 +71,8 @@ describe('Logic', () => {
         };
 
         let state = {
-            '$class': 'org.accordproject.common.ContractState',
-            'stateId': 'org.accordproject.common.ContractState#1'
+            '$class': 'org.accordproject.cicero.contract.AccordContractState',
+            'stateId': '1'
         };
 
         it('should produce correct result', async function() {
@@ -83,7 +83,7 @@ describe('Logic', () => {
                 distance: 100,
             };
             const result = await engine.execute(clause, request, state);
-            result.response.lineItem.quantity.should.be.equal(100);
+            result.response.totalDistance.should.be.equal(100);
         });
     });
 });

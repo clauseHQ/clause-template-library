@@ -9,6 +9,7 @@ namespace io.clause.platoon
 
 import io.clause.outbound.physical.* from github://clausehq/clause-model-library/master/physical/physical.cto
 import io.clause.outbound.physical.payments.xero.* from github://clausehq/clause-model-library/master/physical/payments/xero.cto
+import org.accordproject.cicero.contract.* from https://models.accordproject.org/cicero/contract.cto
 
 concept Address {
   o String street
@@ -120,25 +121,18 @@ transaction ExitPlatoon extends VehicleTransaction {
 }
 
 /**
- * A vehicle exits a platoon
- */
-transaction CancelPlatoon {
-}
-
-/**
  * Returned from a EndPlatoon transaction
  */
-transaction FeeCalculations {
-  o Double leaderFee
-  o Double subscriberFee
+transaction FeeCalculations extends VehicleTransaction {
+  o Double feePerKm
+  o Double totalDistance
 }
 
 /**
  * The template model
  */
-@AccordTemplateModel("platooning")
-concept TemplateModel {
+asset TemplateModel extends AccordClause {
+  o Double monthlyFee
   o Double leaderFeePerKm
   o Double highAutomationFeePerKm
-  o Double cancelationFee
 }

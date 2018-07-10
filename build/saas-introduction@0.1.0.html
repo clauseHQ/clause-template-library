@@ -1,0 +1,296 @@
+
+
+
+<!DOCTYPE html>
+<html>
+<head>
+    <script>
+        // handle drop down menus
+        window.addEventListener('load', function () {
+            var dropdown = document.querySelector('.dropdown');
+            if(dropdown) {
+                dropdown.addEventListener('click', function(event) {
+                    event.stopPropagation();
+                    dropdown.classList.toggle('is-active');
+                });
+            }
+        }, false);
+    </script>
+    
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    
+    
+    
+
+    <!-— generic unfurl tags -->
+    <meta property="og:type" content="website" />
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:domain" content="templates.accordproject.org" />
+    <meta name="twitter:label1" content="Apache 2.0 Licensed" />
+    <meta name="twitter:data1" content="on GitHub.com" />
+    <meta name="twitter:label2" content="Contribute" />
+    <meta name="twitter:data2" content="at AccordProject.org" />
+
+    
+<!-— facebook open graph tags -->
+<meta property="og:url" content="https://templates.accordproject.org/saas-introduction@0.1.0.html" />
+<meta property="og:title" content="saas-introduction@0.1.0" />
+<meta property="og:description" content="A Software-as-a-service introduction block." />
+<meta property="og:image" content="https://www.plantuml.com/plantuml/png/jP91JWCn34NtSmelgMXpWchK2hQmWBb0bBX3K187Esar0kwE6OsGPaU5MDdIr_z-N_91gkNQKknSj28GoEZI18tOL2AAJYiXLoRVN0sKpHE-DPGA-ptS3Di9OwJB1leUthlFxWh_RlVH0_5eNgQ27D6FoCPHAYIwo2GLandOPh6pyHf2APG5_u2u1FmVuu0gs8eFv37EeCVjo8XvuGI0MtYk7F88U3gXkivuhuQLKfZEmIC_shGMN9DAQH5-rNaDz5FSEaVizSwh8XWN7B9caJgriJdEwjqStHqm--zF-W80" />
+
+<!-— twitter card tags additive with the og: tags -->
+<meta name="twitter:title" content="saas-introduction@0.1.0" />
+<meta name="twitter:description" content="A Software-as-a-service introduction block." />
+<meta name="twitter:image" content="https://www.plantuml.com/plantuml/png/jP91JWCn34NtSmelgMXpWchK2hQmWBb0bBX3K187Esar0kwE6OsGPaU5MDdIr_z-N_91gkNQKknSj28GoEZI18tOL2AAJYiXLoRVN0sKpHE-DPGA-ptS3Di9OwJB1leUthlFxWh_RlVH0_5eNgQ27D6FoCPHAYIwo2GLandOPh6pyHf2APG5_u2u1FmVuu0gs8eFv37EeCVjo8XvuGI0MtYk7F88U3gXkivuhuQLKfZEmIC_shGMN9DAQH5-rNaDz5FSEaVizSwh8XWN7B9caJgriJdEwjqStHqm--zF-W80" />
+<meta name="twitter:image:alt" content="UML diagram of saas-introduction@0.1.0 namespace." />
+<meta name="twitter:url" content="https://templates.accordproject.org/saas-introduction@0.1.0.html" />
+
+
+    <title>Accord Project Template Library</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.1/css/bulma.min.css">
+    <script defer src="https://use.fontawesome.com/releases/v5.0.7/js/all.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/default.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
+</head>
+
+<body>
+    <section class="section">
+        <div class="container">
+            <a href="/">
+                <img src="/accord_logo.png" />
+            </a>
+        </div>
+    </section>
+
+    
+    <section class="section">
+        <div class="container">
+            <h1 class="title">
+                Template saas-introduction@0.1.0
+            </h1>
+            <div class="tags">
+                <span class="tag">Clause</span>
+                <span class="tag">JavaScript</span>
+                <span class="tag">^0.4</span>
+                <span class="tag">379a29540a535daee35f7fc9f30fa4a2f0de3a7507582ab43260782ad175a335</span>
+            </div>
+            <p class="subtitle">
+                A Software-as-a-service introduction block.
+            </p>
+
+            <p>
+                <div class="dropdown">
+                    <div class="dropdown-trigger">
+                        <button class="button" aria-haspopup="true" aria-controls="dropdown-menu">
+                            <span>Versions</span>
+                            <span class="icon is-small">
+                                <i class="fas fa-angle-down" aria-hidden="true"></i>
+                            </span>
+                        </button>
+                    </div>
+                    <div class="dropdown-menu" id="dropdown-menu" role="menu">
+                        <div class="dropdown-content">
+                        
+                            <a href="saas-introduction@0.1.0.html" class="dropdown-item is-active">
+                                saas-introduction@0.1.0
+                            </a>
+                        
+                        </div>
+                    </div>
+                </div>
+                <a href="./archives/saas-introduction@0.1.0.cta" class="button is-rounded">Download Archive</a>
+            </p>
+
+            <img src="https://www.plantuml.com/plantuml/svg/jP91JWCn34NtSmelgMXpWchK2hQmWBb0bBX3K187Esar0kwE6OsGPaU5MDdIr_z-N_91gkNQKknSj28GoEZI18tOL2AAJYiXLoRVN0sKpHE-DPGA-ptS3Di9OwJB1leUthlFxWh_RlVH0_5eNgQ27D6FoCPHAYIwo2GLandOPh6pyHf2APG5_u2u1FmVuu0gs8eFv37EeCVjo8XvuGI0MtYk7F88U3gXkivuhuQLKfZEmIC_shGMN9DAQH5-rNaDz5FSEaVizSwh8XWN7B9caJgriJdEwjqStHqm--zF-W80" />
+
+            <div class="content">
+                <p>
+                <h1 id="accordprotocoltemplatesaasintroduction">Accord Protocol Template: saas-introduction</h1>
+<p>The is an Accord Protocol Template. Executing the clause will simply echo back the text that occurs after the string <code>Hello</code> prepended to text that is passed in the request.</p>
+<h3 id="parse">Parse</h3>
+<p>Use the <code>cicero parse</code> command to load a template from a directory on disk and then use it to parse input text, echoing the result of parsing. If the input text is valid the parsing result will be a JSON serialized instance of the Template Mode:</p>
+<p>Sample template.tem:</p>
+<pre><code>Name of the person to greet: [{name}].
+Thank you!
+</code></pre>
+<p>Sample.txt:</p>
+<pre><code>Name of the person to greet: "Dan".
+Thank you!
+</code></pre>
+<pre><code>cicero parse --template ./saas-introduction/ --dsl ./saas-introduction/sample.txt
+Setting clause data: {"$class":"io.clause.helloworld.TemplateModel","name":"Dan"}
+</code></pre>
+<p>Or, attempting to parse invalid data will result in line and column information for the syntax error.</p>
+<p>Sample.txt:</p>
+<pre><code>FUBAR Name of the person to greet: "Dan".
+Thank you!
+</code></pre>
+<pre><code>{ Error: invalid syntax at line 1 col 1:
+
+  FUBAR  Name of the person to greet: "Dan".
+  ^
+Unexpected "F"
+</code></pre>
+<h3 id="execute">Execute</h3>
+<p>Use the <code>cicero execute</code> command to load a template from a directory on disk, instantiate a clause based on input text, and then invoke the clause using an incoming JSON payload.</p>
+<pre><code>data.json:
+{
+   "$class": "io.clause.samples.saas-introduction.Request",
+   "input": "World"
+}
+</code></pre>
+<pre><code>cicero execute --template ./saas-introduction/ --dsl ./saas-introduction/sample.txt --data ./saas-introduction/data.json 
+</code></pre>
+<p>The results of execution (a JSON serialized object) are displayed. They include:</p>
+<ul>
+<li>Details of the clause executed (name, version, SHA256 hash of clause data)</li>
+<li>The incoming request object</li>
+<li>The output response object</li>
+</ul>
+<pre><code>{
+   "clause":"helloworld@0.0.3-c8d9e40fe7c5a479d1a80bce2d2fdc3c8a240ceb44a031d38cbd619e9b795b60",
+   "request":{
+      "$class":"io.clause.samples.saas-introduction.Request",
+      "input":"World"
+   },
+   "response":{
+      "$class":"io.clause.samples.saas-introduction.Response",
+      "output":"Hello Dan World",
+      "transactionId":"cf1dabb5-d604-4ffa-8a87-8333e77a735a",
+      "timestamp":"2017-10-31T10:47:42.055Z"
+   }
+}
+</code></pre>
+                </p>
+            </div>
+
+            <h4 class="title is-4">Sample</h4>
+            <div class="content">
+                <pre style="white-space: pre-wrap; border: 0; background-color: transparent;">
+This Software as a Service Agreement (this 'Agreement'), effective as of "14 February, 2018" (the 'Effective Date'), is by and between "Clause Inc." ('Provider') and "EuroLogistics GmbH" ('Customer'). Provider and Customer may be referred to herein collectively as the 'Parties' or individually as a 'Party.' 
+
+The Parties agree as follows:
+                </pre>
+            </div>
+
+            <h4 class="title is-4">Model Dependencies</h4>
+            <div class="content">
+                <ul>
+                
+                <li><a href="https://models.accordproject.org/cicero/contract.html">org.accordproject.cicero.contract.AccordClause</a></li>
+                
+                </ul>
+            </div>
+
+            <div class="container">
+    <h2 class="title is-2">Technical Integration</h2>
+
+    <div class="content">
+    <p>
+    Please refer to the <a href="https://docs.accordproject.org/docs/cicero.html">Cicero documentation</a> 
+    for details and examples of how to integrate a call to a Cicero template into your application.
+    <p>
+    <p>
+    View the Latest code for this template on <a href="https://github.com/clausehq/clause-template-library/tree/master/src/saas-introduction">on GitHub.</a>
+    </p>
+    </div>
+
+    <h4 class="title is-4">Sample Instance</h4>
+    <pre style="white-space: pre-wrap; border: 0; background-color: transparent;"><code style="white-space: pre-wrap;">{
+    "$class": "io.clause.samples.saasintroduction.TemplateModel",
+    "clauseId": "4ce7801b-8573-4593-a449-e6949718b32f",
+    "effectiveDate": "14 February, 2018",
+    "providerName": "Clause Inc.",
+    "customerName": "EuroLogistics GmbH"
+}</pre></code>
+
+    <h4 class="title is-4">State Types</h4>
+    <table class="table">
+    <thead>
+        <tr>
+        <th>Type</th>
+        <th>Sample JSON</th>
+        </tr>
+    </thead>
+    <tbody>
+        
+    </tbody>
+    </table>
+
+    <h4 class="title is-4">Request Types</h4>
+    <table class="table">
+    <thead>
+        <tr>
+        <th>Type</th>
+        <th>Sample JSON</th>
+        </tr>
+    </thead>
+    <tbody>
+        
+        <tr>
+        <th>io.clause.samples.saasintroduction.Request</th>
+        <td><pre style="white-space: pre-wrap; border: 0; background-color: transparent;"><code style="white-space: pre-wrap;">{
+    "$class": "io.clause.samples.saasintroduction.Request",
+    "transactionId": "39245630-8421-11e8-b107-abe00c3f49f8",
+    "timestamp": "2018-07-10T09:11:26.227Z"
+}</pre></code></td>
+        </tr>
+        
+    </tbody>
+    </table>
+
+    <h4 class="title is-4">Response Types</h4>
+    <table class="table">
+    <thead>
+        <tr>
+        <th>Type</th>
+        <th>Sample JSON</th>
+        </tr>
+    </thead>
+    <tbody>
+        
+        <tr>
+        <th>io.clause.samples.saasintroduction.Response</th>
+        <td><pre style="white-space: pre-wrap; border: 0; background-color: transparent;"><code style="white-space: pre-wrap;">{
+    "$class": "io.clause.samples.saasintroduction.Response",
+    "transactionId": "39245631-8421-11e8-b107-abe00c3f49f8",
+    "timestamp": "2018-07-10T09:11:26.227Z"
+}</pre></code></td>
+        </tr>
+        
+    </tbody>
+    </table>
+
+    <h4 class="title is-4">Events Types</h4>
+    <table class="table">
+    <thead>
+        <tr>
+        <th>Type</th>
+        <th>Sample JSON</th>
+        </tr>
+    </thead>
+    <tbody>
+        
+    </tbody>
+    </table>
+</div>
+
+        </div>
+    </section>
+
+
+    <footer class="footer">
+        <div class="container">
+            <div class="content has-text-centered">
+                <p>
+                    Copyright 2018 <a href="https://accordproject.org">Clause Inc.</a>.
+                </p>
+            </div>
+        </div>
+    </footer>
+</body>
+
+</html>
