@@ -89,7 +89,7 @@ nunjucks.configure('./views', {
 
         if(!process.env.SKIP_GENERATION) {
             // copy the logo to build directory
-            await fs.copy('accord_logo.png', './build/accord_logo.png');
+            await fs.copy('clause_logo.jpg', './build/clause_logo.jpg');
 
             // get the latest versions of each template
             const latestIndex = filterTemplateIndex(templateIndex);
