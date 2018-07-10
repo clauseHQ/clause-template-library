@@ -20,32 +20,28 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    {%set accord_logo="accord_logo_large.png"%}
-    {%set title="Accord Project Template Library"%}
-    {%set description="Library hosting all Accord Project templates."%}
+    {%set accord_logo="clause_logo.png"%}
+    {%set title="Clause Template Library"%}
+    {%set description="Library hosting all Clause templates."%}
 
     <!-— generic unfurl tags -->
     <meta property="og:type" content="website" />
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:domain" content="templates.accordproject.org" />
-    <meta name="twitter:label1" content="Apache 2.0 Licensed" />
-    <meta name="twitter:data1" content="on GitHub.com" />
-    <meta name="twitter:label2" content="Contribute" />
-    <meta name="twitter:data2" content="at AccordProject.org" />
+    <meta name="twitter:domain" content="clause-template-library.netlify.com" />
 
     {% block unfurl %}
     <!-— facebook open graph tags -->
-    <meta property="og:url" content="https://templates.accordproject.org" />
+    <meta property="og:url" content="https://clause-template-library.netlify.com" />
     <meta property="og:title" content="{{title}}" />
     <meta property="og:description" content="{{description}}" />
     <meta property="og:image" content="{{serverRoot}}/{{accord_logo}}" />
  
     <!-— twitter card tags additive with the og: tags -->
     <meta name="twitter:title" content="{{title}}" />
-    <meta name="twitter:site" content="@AccordHQ" />
+    <meta name="twitter:site" content="@ClauseHQ" />
     <meta name="twitter:description" content="{{description}}" />
     <meta name="twitter:image" content="{{serverRoot}}/{{accord_logo}}" />
-    <meta name="twitter:image:alt" content="The Accord Project logo" />
+    <meta name="twitter:image:alt" content="The Clause logo" />
     <meta name="twitter:url" content="{{serverRoot}}" />
     {% endblock %}
 
@@ -61,7 +57,7 @@
     <section class="section">
         <div class="container">
             <a href="/">
-                <img src="/accord_logo.png" />
+                <img src="/clause_logo.png" />
             </a>
         </div>
     </section>
@@ -72,7 +68,7 @@
         <div class="container">
             <div class="content has-text-centered">
                 <p>
-                    Copyright 2018 <a href="https://accordproject.org">Clause Inc.</a>.
+                    Copyright 2018 <a href="https://clause.io">Clause Inc.</a>.
                 </p>
             </div>
         </div>
