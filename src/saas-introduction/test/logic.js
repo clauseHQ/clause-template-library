@@ -25,8 +25,8 @@ describe('Logic', () => {
     let engine;
 
     let state = {
-        '$class': 'org.accordproject.common.ContractState',
-        'stateId': 'org.accordproject.common.ContractState#1'
+        '$class': 'org.accordproject.cicero.contract.AccordContractState',
+        'stateId': '1'
     };
 
     beforeEach( async function() {

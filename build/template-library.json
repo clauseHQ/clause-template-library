@@ -1,0 +1,20 @@
+{
+    "platooning-ride@0.1.0": {
+        "uri": "ap://platooning-ride@0.1.0#88de455d99bb9a9e26891b14d38e2f421be37d697ef2e48530037833ecaa2055",
+        "url": "https://templates.accordproject.org/archives/platooning-ride@0.1.0.cta",
+        "name": "platooning-ride",
+        "description": "A sample exhibit incluing fees for a truck platooning contract.",
+        "version": "0.1.0",
+        "ciceroVersion": "^0.4",
+        "type": 1
+    },
+    "saas-introduction@0.1.0": {
+        "uri": "ap://saas-introduction@0.1.0#379a29540a535daee35f7fc9f30fa4a2f0de3a7507582ab43260782ad175a335",
+        "url": "https://templates.accordproject.org/archives/saas-introduction@0.1.0.cta",
+        "name": "saas-introduction",
+        "description": "A Software-as-a-service introduction block.",
+        "version": "0.1.0",
+        "ciceroVersion": "^0.4",
+        "type": 1
+    }
+}

@@ -1,0 +1,65 @@
+@startuml
+class io.clause.platoon.Address {
+   + String street
+   + String city
+   + String zip
+   + String country
+}
+class io.clause.platoon.Location {
+   + Double lat
+   + Double long
+}
+class io.clause.platoon.Destination {
+   + Address address
+}
+io.clause.platoon.Destination --|> io.clause.platoon.Location
+class io.clause.platoon.VehicleSpecification {
+   + String make
+   + String model
+   + Integer year
+   + Double brakingDistance
+}
+class io.clause.platoon.Vehicle << (A,green) >> {
+   + String id
+   + VehicleSpecification vehicleSpecification
+   + Location location
+   + Destination destination
+   + String platoonContractUrl
+   + VehicleTransaction[] vehicleTransactions
+   + Vehicle[] platoon
+   + Vehicle platoonLeader
+}
+io.clause.platoon.Vehicle --|> org.hyperledger.composer.system.Asset
+class io.clause.platoon.VehicleTransaction << (T,yellow) >> {
+   + Vehicle vehicle
+}
+io.clause.platoon.VehicleTransaction --|> org.hyperledger.composer.system.Transaction
+class io.clause.platoon.VehicleMovement << (T,yellow) >> {
+   + Location location
+}
+io.clause.platoon.VehicleMovement --|> io.clause.platoon.VehicleTransaction
+class io.clause.platoon.VehicleUpdateDestination << (T,yellow) >> {
+   + Destination destination
+}
+io.clause.platoon.VehicleUpdateDestination --|> io.clause.platoon.VehicleTransaction
+class io.clause.platoon.JoinPlatoon << (T,yellow) >> {
+   + Vehicle platoonLeader
+}
+io.clause.platoon.JoinPlatoon --|> io.clause.platoon.VehicleTransaction
+class io.clause.platoon.ExitPlatoon << (T,yellow) >> {
+   + Vehicle platoonLeader
+   + Double distance
+}
+io.clause.platoon.ExitPlatoon --|> io.clause.platoon.VehicleTransaction
+class io.clause.platoon.FeeCalculations << (T,yellow) >> {
+   + Double feePerKm
+   + Double totalDistance
+}
+io.clause.platoon.FeeCalculations --|> io.clause.platoon.VehicleTransaction
+class io.clause.platoon.TemplateModel << (A,green) >> {
+   + Double monthlyFee
+   + Double leaderFeePerKm
+   + Double highAutomationFeePerKm
+}
+io.clause.platoon.TemplateModel --|> org.accordproject.cicero.contract.AccordClause
+@enduml

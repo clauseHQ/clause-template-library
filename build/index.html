@@ -1,0 +1,133 @@
+
+
+
+<!DOCTYPE html>
+<html>
+<head>
+    <script>
+        // handle drop down menus
+        window.addEventListener('load', function () {
+            var dropdown = document.querySelector('.dropdown');
+            if(dropdown) {
+                dropdown.addEventListener('click', function(event) {
+                    event.stopPropagation();
+                    dropdown.classList.toggle('is-active');
+                });
+            }
+        }, false);
+    </script>
+    
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    
+    
+    
+
+    <!-— generic unfurl tags -->
+    <meta property="og:type" content="website" />
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:domain" content="clause-template-library.netlify.com" />
+
+    
+    <!-— facebook open graph tags -->
+    <meta property="og:url" content="https://clause-template-library.netlify.com" />
+    <meta property="og:title" content="Clause Template Library" />
+    <meta property="og:description" content="Library hosting all Clause templates." />
+    <meta property="og:image" content="https://templates.accordproject.org/clause_logo.jpg" />
+ 
+    <!-— twitter card tags additive with the og: tags -->
+    <meta name="twitter:title" content="Clause Template Library" />
+    <meta name="twitter:site" content="@ClauseHQ" />
+    <meta name="twitter:description" content="Library hosting all Clause templates." />
+    <meta name="twitter:image" content="https://templates.accordproject.org/clause_logo.jpg" />
+    <meta name="twitter:image:alt" content="The Clause logo" />
+    <meta name="twitter:url" content="https://templates.accordproject.org" />
+    
+
+    <title>Accord Project Template Library</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.1/css/bulma.min.css">
+    <script defer src="https://use.fontawesome.com/releases/v5.0.7/js/all.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/default.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
+</head>
+
+<body>
+    <section class="section">
+        <div class="container">
+            <a href="/">
+                <img src="/clause_logo.jpg" />
+            </a>
+        </div>
+    </section>
+
+    
+    <section class="section">
+        <div class="container">
+            <h1 class="title">
+                Clause Template Library
+            </h1>
+        </div>
+    </section>
+
+    <section class="section">
+        <div class="container">
+            <h2 class="title is-2">Templates</h2>
+            <table class="table">
+            <thead>
+                <tr>
+                <th>Name</th>
+                <th>Description</th>
+                <th>Cicero Version</th>
+                <th>Type</th>
+                <th>Language</th>
+                </tr>
+            </thead>
+            <tbody>
+                
+                <tr>
+                <th><a href="platooning-ride@0.1.0.html">platooning-ride@0.1.0<a></th>
+                <td>A sample exhibit incluing fees for a truck platooning contract.</td>
+                <td>^0.4</td>
+                <td>Clause</td>
+                <td>JavaScript</td>
+                
+                <tr>
+                <th><a href="saas-introduction@0.1.0.html">saas-introduction@0.1.0<a></th>
+                <td>A Software-as-a-service introduction block.</td>
+                <td>^0.4</td>
+                <td>Clause</td>
+                <td>JavaScript</td>
+                
+            </tbody>            
+            <tfoot>
+                <tr>
+                <th>Name</th>
+                <th>Description</th>
+                <th>Cicero Version</th>
+                <th>Type</th>
+                <th>Language</th>
+                </tr>
+            </tfoot>
+            </table>
+            <div class="content">
+                <a href="template-library.json">Template Library Index</a>
+            </div>
+        </div>
+    </section>
+
+
+
+    <footer class="footer">
+        <div class="container">
+            <div class="content has-text-centered">
+                <p>
+                    Copyright 2018 <a href="https://clause.io">Clause Inc.</a>.
+                </p>
+            </div>
+        </div>
+    </footer>
+</body>
+
+</html>

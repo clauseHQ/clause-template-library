@@ -1,0 +1,254 @@
+
+
+
+<!DOCTYPE html>
+<html>
+<head>
+    <script>
+        // handle drop down menus
+        window.addEventListener('load', function () {
+            var dropdown = document.querySelector('.dropdown');
+            if(dropdown) {
+                dropdown.addEventListener('click', function(event) {
+                    event.stopPropagation();
+                    dropdown.classList.toggle('is-active');
+                });
+            }
+        }, false);
+    </script>
+    
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    
+    
+    
+
+    <!-— generic unfurl tags -->
+    <meta property="og:type" content="website" />
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:domain" content="clause-template-library.netlify.com" />
+
+    
+<!-— facebook open graph tags -->
+<meta property="og:url" content="https://templates.accordproject.org/platooning-ride@0.1.0.html" />
+<meta property="og:title" content="platooning-ride@0.1.0" />
+<meta property="og:description" content="A sample exhibit incluing fees for a truck platooning contract." />
+<meta property="og:image" content="https://www.plantuml.com/plantuml/png/fPRRRjim38RlynIwtB3MJr04DP8LwDe11PhkPjY5Ah6sMaaq9BgRTtZtgJwaKkF3i5n5_aMH7qcPphadxgWsUYKqzvufpCAYzf1LcXEYpN8f7OITNol6s0TsIqxPWdbo09H8Gb6J23zLbHfWRSargp-JiQvHS59eXs1RhEyriB2RFgCjPhnimPEoYQCX2TxzXiFpnqvFVwzd-2P3Vu5I2Gst5GZreD9a-YeO_WIfW19qfrnQWW8SQu2x9EDxnv-2xLQ5Tba1Cydt1EpiZBtBJuhG9VkUhTTl89Ji7aTvdqV4pdpV7usn75TElgwJY3tV1iCLu8Bkd4u8TevR7_HmxEktWI0IVM8TJ7f_YJo8ry0bkD4c3vPjWz4LMTbKu3J8KFPCeAdGXuLlF879Sk_37L-eT0JP5drtqe3M-3sk-X2rpskEB7RtJv3HWINKp_WC1YnDSXxsTuPqxstYPJbCQ8dlhfAS8BvDKw1JDsu6zz3vyToVKDcRRhtO--Mx6NixdktZ3qN_nnOF7lawSUP370zy0R3XMjIwxOwVxdr7zW1m0-xA928XSRsTOtuRvNZk7PYNPNWVmXoVchizdmdZhzHDW4W_Q6tXByOoAbLHvZMXQNdt9cEffI3xuS65G2ShXuyWA1DAW0j7-pcSvUtkflMqEWShN_uB_0K0" />
+
+<!-— twitter card tags additive with the og: tags -->
+<meta name="twitter:title" content="platooning-ride@0.1.0" />
+<meta name="twitter:description" content="A sample exhibit incluing fees for a truck platooning contract." />
+<meta name="twitter:image" content="https://www.plantuml.com/plantuml/png/fPRRRjim38RlynIwtB3MJr04DP8LwDe11PhkPjY5Ah6sMaaq9BgRTtZtgJwaKkF3i5n5_aMH7qcPphadxgWsUYKqzvufpCAYzf1LcXEYpN8f7OITNol6s0TsIqxPWdbo09H8Gb6J23zLbHfWRSargp-JiQvHS59eXs1RhEyriB2RFgCjPhnimPEoYQCX2TxzXiFpnqvFVwzd-2P3Vu5I2Gst5GZreD9a-YeO_WIfW19qfrnQWW8SQu2x9EDxnv-2xLQ5Tba1Cydt1EpiZBtBJuhG9VkUhTTl89Ji7aTvdqV4pdpV7usn75TElgwJY3tV1iCLu8Bkd4u8TevR7_HmxEktWI0IVM8TJ7f_YJo8ry0bkD4c3vPjWz4LMTbKu3J8KFPCeAdGXuLlF879Sk_37L-eT0JP5drtqe3M-3sk-X2rpskEB7RtJv3HWINKp_WC1YnDSXxsTuPqxstYPJbCQ8dlhfAS8BvDKw1JDsu6zz3vyToVKDcRRhtO--Mx6NixdktZ3qN_nnOF7lawSUP370zy0R3XMjIwxOwVxdr7zW1m0-xA928XSRsTOtuRvNZk7PYNPNWVmXoVchizdmdZhzHDW4W_Q6tXByOoAbLHvZMXQNdt9cEffI3xuS65G2ShXuyWA1DAW0j7-pcSvUtkflMqEWShN_uB_0K0" />
+<meta name="twitter:image:alt" content="UML diagram of platooning-ride@0.1.0 namespace." />
+<meta name="twitter:url" content="https://templates.accordproject.org/platooning-ride@0.1.0.html" />
+
+
+    <title>Accord Project Template Library</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.1/css/bulma.min.css">
+    <script defer src="https://use.fontawesome.com/releases/v5.0.7/js/all.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/default.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
+</head>
+
+<body>
+    <section class="section">
+        <div class="container">
+            <a href="/">
+                <img src="/clause_logo.jpg" />
+            </a>
+        </div>
+    </section>
+
+    
+    <section class="section">
+        <div class="container">
+            <h1 class="title">
+                Template platooning-ride@0.1.0
+            </h1>
+            <div class="tags">
+                <span class="tag">Clause</span>
+                <span class="tag">JavaScript</span>
+                <span class="tag">^0.4</span>
+                <span class="tag">88de455d99bb9a9e26891b14d38e2f421be37d697ef2e48530037833ecaa2055</span>
+            </div>
+            <p class="subtitle">
+                A sample exhibit incluing fees for a truck platooning contract.
+            </p>
+
+            <p>
+                <div class="dropdown">
+                    <div class="dropdown-trigger">
+                        <button class="button" aria-haspopup="true" aria-controls="dropdown-menu">
+                            <span>Versions</span>
+                            <span class="icon is-small">
+                                <i class="fas fa-angle-down" aria-hidden="true"></i>
+                            </span>
+                        </button>
+                    </div>
+                    <div class="dropdown-menu" id="dropdown-menu" role="menu">
+                        <div class="dropdown-content">
+                        
+                            <a href="platooning-ride@0.1.0.html" class="dropdown-item is-active">
+                                platooning-ride@0.1.0
+                            </a>
+                        
+                        </div>
+                    </div>
+                </div>
+                <a href="./archives/platooning-ride@0.1.0.cta" class="button is-rounded">Download Archive</a>
+            </p>
+
+            <img src="https://www.plantuml.com/plantuml/svg/fPRRRjim38RlynIwtB3MJr04DP8LwDe11PhkPjY5Ah6sMaaq9BgRTtZtgJwaKkF3i5n5_aMH7qcPphadxgWsUYKqzvufpCAYzf1LcXEYpN8f7OITNol6s0TsIqxPWdbo09H8Gb6J23zLbHfWRSargp-JiQvHS59eXs1RhEyriB2RFgCjPhnimPEoYQCX2TxzXiFpnqvFVwzd-2P3Vu5I2Gst5GZreD9a-YeO_WIfW19qfrnQWW8SQu2x9EDxnv-2xLQ5Tba1Cydt1EpiZBtBJuhG9VkUhTTl89Ji7aTvdqV4pdpV7usn75TElgwJY3tV1iCLu8Bkd4u8TevR7_HmxEktWI0IVM8TJ7f_YJo8ry0bkD4c3vPjWz4LMTbKu3J8KFPCeAdGXuLlF879Sk_37L-eT0JP5drtqe3M-3sk-X2rpskEB7RtJv3HWINKp_WC1YnDSXxsTuPqxstYPJbCQ8dlhfAS8BvDKw1JDsu6zz3vyToVKDcRRhtO--Mx6NixdktZ3qN_nnOF7lawSUP370zy0R3XMjIwxOwVxdr7zW1m0-xA928XSRsTOtuRvNZk7PYNPNWVmXoVchizdmdZhzHDW4W_Q6tXByOoAbLHvZMXQNdt9cEffI3xuS65G2ShXuyWA1DAW0j7-pcSvUtkflMqEWShN_uB_0K0" />
+
+            <div class="content">
+                <p>
+                <h1 id="platooning">Platooning</h1>
+                </p>
+            </div>
+
+            <h4 class="title is-4">Sample</h4>
+            <div class="content">
+                <pre style="white-space: pre-wrap; border: 0; background-color: transparent;">
+EXHIBIT A
+Capitalized terms used but not defined in this Exhibit A have the meaning given to those terms in the Agreement. 
+
+A. FEES:
+
+A.1 A monthly subscription fee of 5.00 EUR per truck is invoiced by the platooning service provider to the subscriber.
+
+A.2 For each kilometer that a truck is the leading truck of a platoon the customer will be credited 0.10 EUR by the provider.
+
+A.3 For each kilometer that a truck is a truck platoon member, the customer will be invoiced 0.6 EUR by the provider.
+                </pre>
+            </div>
+
+            <h4 class="title is-4">Model Dependencies</h4>
+            <div class="content">
+                <ul>
+                
+                <li><a href="github://clausehq/clause-model-library/master/physical/physical.html">io.clause.outbound.physical.*</a></li>
+                
+                <li><a href="github://clausehq/clause-model-library/master/physical/payments/xero.html">io.clause.outbound.physical.payments.xero.*</a></li>
+                
+                <li><a href="https://models.accordproject.org/cicero/contract.html">org.accordproject.cicero.contract.*</a></li>
+                
+                </ul>
+            </div>
+
+            <div class="container">
+    <h2 class="title is-2">Technical Integration</h2>
+
+    <div class="content">
+    <p>
+    Please refer to the <a href="https://docs.accordproject.org/docs/cicero.html">Cicero documentation</a> 
+    for details and examples of how to integrate a call to a Cicero template into your application.
+    <p>
+    <p>
+    View the Latest code for this template on <a href="https://github.com/clausehq/clause-template-library/tree/master/src/platooning-ride">on GitHub.</a>
+    </p>
+    </div>
+
+    <h4 class="title is-4">Sample Instance</h4>
+    <pre style="white-space: pre-wrap; border: 0; background-color: transparent;"><code style="white-space: pre-wrap;">{
+    "$class": "io.clause.platoon.TemplateModel",
+    "clauseId": "c13df84c-281f-414e-aa2d-0f6a80892783",
+    "monthlyFee": 5,
+    "leaderFeePerKm": 0.1,
+    "highAutomationFeePerKm": 0.6
+}</pre></code>
+
+    <h4 class="title is-4">State Types</h4>
+    <table class="table">
+    <thead>
+        <tr>
+        <th>Type</th>
+        <th>Sample JSON</th>
+        </tr>
+    </thead>
+    <tbody>
+        
+    </tbody>
+    </table>
+
+    <h4 class="title is-4">Request Types</h4>
+    <table class="table">
+    <thead>
+        <tr>
+        <th>Type</th>
+        <th>Sample JSON</th>
+        </tr>
+    </thead>
+    <tbody>
+        
+        <tr>
+        <th>io.clause.platoon.ExitPlatoon</th>
+        <td><pre style="white-space: pre-wrap; border: 0; background-color: transparent;"><code style="white-space: pre-wrap;">{
+    "$class": "io.clause.platoon.ExitPlatoon",
+    "platoonLeader": "resource:io.clause.platoon.Vehicle#0311",
+    "distance": 174.622,
+    "vehicle": "resource:io.clause.platoon.Vehicle#7528",
+    "transactionId": "d75b8060-8423-11e8-b6b0-b5c72bb39372",
+    "timestamp": "2018-07-10T09:30:10.662Z"
+}</pre></code></td>
+        </tr>
+        
+    </tbody>
+    </table>
+
+    <h4 class="title is-4">Response Types</h4>
+    <table class="table">
+    <thead>
+        <tr>
+        <th>Type</th>
+        <th>Sample JSON</th>
+        </tr>
+    </thead>
+    <tbody>
+        
+        <tr>
+        <th>io.clause.platoon.FeeCalculations</th>
+        <td><pre style="white-space: pre-wrap; border: 0; background-color: transparent;"><code style="white-space: pre-wrap;">{
+    "$class": "io.clause.platoon.FeeCalculations",
+    "feePerKm": 247.595,
+    "totalDistance": 86.897,
+    "vehicle": "resource:io.clause.platoon.Vehicle#7145",
+    "transactionId": "d75c43b0-8423-11e8-b6b0-b5c72bb39372",
+    "timestamp": "2018-07-10T09:30:10.667Z"
+}</pre></code></td>
+        </tr>
+        
+    </tbody>
+    </table>
+
+    <h4 class="title is-4">Events Types</h4>
+    <table class="table">
+    <thead>
+        <tr>
+        <th>Type</th>
+        <th>Sample JSON</th>
+        </tr>
+    </thead>
+    <tbody>
+        
+    </tbody>
+    </table>
+</div>
+
+        </div>
+    </section>
+
+
+    <footer class="footer">
+        <div class="container">
+            <div class="content has-text-centered">
+                <p>
+                    Copyright 2018 <a href="https://clause.io">Clause Inc.</a>.
+                </p>
+            </div>
+        </div>
+    </footer>
+</body>
+
+</html>

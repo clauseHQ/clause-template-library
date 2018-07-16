@@ -1,7 +1,9 @@
 /**
  * (c) Copyright 2018 Clause Inc., all rights reserved.
  */
- namespace io.clause.samples.saasintroduction
+namespace io.clause.samples.saasintroduction
+
+import org.accordproject.cicero.contract.AccordClause from https://models.accordproject.org/cicero/contract.cto
 
 transaction Request {
 }
@@ -12,8 +14,7 @@ transaction Response {
 /**
  * The template model
  */
-@AccordTemplateModel("saas-introduction")
-concept TemplateModel {
+asset TemplateModel extends AccordClause {
   o String effectiveDate
   o String providerName
   o String customerName
